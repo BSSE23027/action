@@ -17,11 +17,11 @@ jobs:
           smtp-server: smtp.gmail.com
           smtp-port: 465
           smtp-secure: true
-          from-email: ${{ secrets.SMTP_USERNAME }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
+          from-email: rafeeqhippargi130@gmail.com
+          username: rafeeqhippargi130@gmail.com
+          password: asmhglvwvbyyfuv
           to-email: brucehardy20059@yahoo.com
-          reply-to: ${{ secrets.SMTP_USERNAME }}
+          reply-to: rafeeqhippargi130@gmail.com
           subject: "Deploy ${{ github.ref_name }} - ${{ github.sha }}"
           body: |
             Branch: ${{ github.ref_name }}
