@@ -18,8 +18,8 @@ jobs:
           smtp-port: 465
           smtp-secure: true
           from-email: ${{ secrets.SMTP_USERNAME }}
-          username: ${{ secrets.rafeeqhippargi130@gmail.com }}
-          password: ${{ secrets.asmh glvw wvby yfuv }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
           to-email: brucehardy20059@yahoo.com
           reply-to: ${{ secrets.SMTP_USERNAME }}
           subject: "Deploy ${{ github.ref_name }} - ${{ github.sha }}"
