@@ -1,0 +1,32 @@
+name: Deploy and Notify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send notification
+        uses: ksatriow/action-mailer@v1
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-port: 465
+          smtp-secure: true
+          from-email: ${{ secrets.SMTP_USERNAME }}
+          username: ${{ secrets.rafeeqhippargi130@gmail.com }}
+          password: ${{ secrets.asmh glvw wvby yfuv }}
+          to-email: brucehardy20059@yahoo.com
+          reply-to: ${{ secrets.SMTP_USERNAME }}
+          subject: "Deploy ${{ github.ref_name }} - ${{ github.sha }}"
+          body: |
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
+            Actor: ${{ github.actor }}
+          debug: true
+          retry-count: 3
+          retry-delay: 2000
